@@ -10,7 +10,7 @@ export interface IHotelGroup {
 export interface IHotelGroupDoc extends IHotelGroup, Document {}
 
 export interface IHotelGroupModel extends Model<IHotelGroupDoc> {
-    isNameAlreadyTaken(name: string, excludeUserId?: mongoose.Types.ObjectId): Promise<boolean>;
+    isNameAlreadyTaken(name: string, excludeId?: mongoose.Types.ObjectId): Promise<boolean>;
 }
 
 export type NewHotelGroup = Omit<IHotelGroup, 'slug'>;
